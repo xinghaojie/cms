@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>功能菜单-明细</title>
+	<link rel="shortcut icon" href="../../img/icon_normal.gif" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+<body>
+	<form id="form1" method="post">
+		<table class="titleTab">
+			<tr>
+				<td class="ti">功能菜单详细</td>
+				<td class="bu">
+					<input type="button" class="bnt"  onclick="jumpTo('insert.html')" value="新增下级"/> 
+					<input type="button" class="bnt"  onclick="jumpTo('update.html')" value="编辑"/> 
+					<input type="button" class="bnt"  onclick="delete_onClick()" value="删除"/>
+				</td>
+			</tr>
+		</table>
+
+		<table id="dataTab" class="dataTab">
+			<tr>
+				<td class="right30_blue">名称</td>
+				<td>功能菜单</td>
+			</tr>
+			<tr>
+				<td class="right30_blue">类型</td>
+				<td>MENU</td>
+			</tr>
+			<tr>
+				<td class="right30_blue">地址或按钮建</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td class="right30_blue">父节点</td>
+				<td>-1</td>
+			</tr>
+			<tr>
+				<td class="right30_blue">排序号</td>
+				<td>0010</td>
+			</tr>
+			<tr>
+				<td class="right30_blue">备注</td>
+				<td></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

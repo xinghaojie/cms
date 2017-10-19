@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>左侧菜单栏</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="js/zTree/css/zTreeStyle/zTreeStyle.css" />
+	<script type="text/javascript" src="js/zTree/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/zTree/js/jquery.ztree.all.min.js"></script>
+</head>
+<body class="menubody">
+	<div class="menu_title"></div>
+	<div id="tree" class="ztree"></div>
+</body>
+<script type="text/javascript">
+	var setting = {
+		data: {
+			simpleData: {
+				enable: true
+			}
+		},
+		view: {
+			selectedMulti: false
+		}
+	};
+	var nodes = [
+		{"id":1, "pId":0, "name":"功能菜单", "icon":"img/main/folderOpen.gif", "open":"true"},
+		{"id":11, "pId":1, "name":"cms管理", "icon":"img/main/folderOpen.gif", "open":"true"},
+		{"id":12, "pId":1, "name":"系统管理", "icon":"img/main/folderOpen.gif", "open":"true"},
+		{"id":111, "pId":11, "name":"轮播图管理", "icon":"img/main/leaf.gif", "url":"cms/banner/list.html", "target":"center"},
+		{"id":112, "pId":11, "name":"首页静态化", "icon":"img/main/leaf.gif", "url":"cms/static/list.html", "target":"center"},
+		{"id":121, "pId":12, "name":"系统参数", "icon":"img/main/leaf.gif", "url":"sys/param/list.html", "target":"center"},
+		{"id":122, "pId":12, "name":"字典管理", "icon":"img/main/leaf.gif", "url":"sys/dicttype/list.html", "target":"center"},
+		{"id":123, "pId":12, "name":"角色管理", "icon":"img/main/leaf.gif", "url":"sys/role/list.html", "target":"center"},
+		{"id":124, "pId":12, "name":"用户管理", "icon":"img/main/leaf.gif", "url":"sys/user/list.html", "target":"center"},
+		{"id":125, "pId":12, "name":"修改密码", "icon":"img/main/leaf.gif", "url":"sys/user/editPw.html", "target":"center"},
+		{"id":126, "pId":12, "name":"菜单维护", "icon":"img/main/leaf.gif", "url":"sys/func/workarea.html", "target":"center"}
+	];
+	$.fn.zTree.init($("#tree"), setting, nodes);
+/*
+	$("#tree").height(top.document.documentElement.clientHeight - 40-110-4);
+	$(window).resize(function() {
+		$("#tree").height(top.document.documentElement.clientHeight -40-110-4);
+	});*/
+</script>
+</html>

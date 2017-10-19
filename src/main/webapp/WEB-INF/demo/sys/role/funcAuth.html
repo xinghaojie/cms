@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>角色-功能授权</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/zTree/css/zTreeStyle/zTreeStyle.css" />
+	<script type="text/javascript" src="../../js/zTree/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/zTree/js/jquery.ztree.all.min.js"></script>
+</head>
+<body>
+	<div class="ti">角色信息</div>
+	<table class="dataTab">
+		<tr>
+			<td>角色名称：</td>
+			<td>管理员</td>
+		</tr>
+	</table>
+	
+	<center class="btn_div" >
+		<input type="button" class="bnt" value="确定" onclick="do_Authority('${role.id}');" />
+		<input type="button" class="bnt" value="关闭" onclick="window.close();" />
+	</center>
+
+	<!-- 功能树 -->
+	<ul id="tree" class="ztree"></ul>
+	<script type="text/javascript">
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			view: {
+				selectedMulti: false
+			},
+			check: {
+				enable: true,
+				chkStyle: "checkbox",
+				chkboxType: { "Y": "p", "N": "s" }
+			}
+		};
+		var nodes = [
+			{"id":1, "pId":0, "name":"功能菜单", "icon":"../../img/main/folderOpen.gif", "open":"true", "checked":"true"},
+			{"id":11, "pId":1, "name":"cms管理", "icon":"../../img/main/folderOpen.gif", "open":"true"},
+			{"id":12, "pId":1, "name":"系统管理", "icon":"../../img/main/folderOpen.gif", "open":"true", "checked":"true"},
+			{"id":111, "pId":11, "name":"轮播图管理", "icon":"../../img/main/leaf.gif"},
+			{"id":112, "pId":11, "name":"首页静态化", "icon":"../../img/main/leaf.gif"},
+			{"id":121, "pId":12, "name":"系统参数", "icon":"../../img/main/leaf.gif"},
+			{"id":122, "pId":12, "name":"字典管理", "icon":"../../img/main/leaf.gif"},
+			{"id":123, "pId":12, "name":"角色管理", "icon":"../../img/main/leaf.gif", "checked":"true"},
+			{"id":124, "pId":12, "name":"用户管理", "icon":"../../img/main/leaf.gif"},
+			{"id":125, "pId":12, "name":"修改密码", "icon":"../../img/main/leaf.gif"},
+			{"id":126, "pId":12, "name":"菜单维护", "icon":"../../img/main/leaf.gif"},
+		];
+		$.fn.zTree.init($("#tree"), setting, nodes);
+	</script>
+</body>
+</html>

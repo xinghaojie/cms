@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>菜单维护</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../js/zTree/css/zTreeStyle/zTreeStyle.css" />
+	<script type="text/javascript" src="../../js/zTree/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="../../js/zTree/js/jquery.ztree.all.min.js"></script>
+</head>
+<body class="menubody">
+	<div id="tree" class="ztree menu_bar"></div>
+	<div class="content">
+		<iframe id="myframe" width="100%" height="100%" frameborder="0" src="detail.html"></iframe>
+	</div>
+
+	<ul id="tree" class="ztree"></ul>
+	<script type="text/javascript">
+		var setting = {
+			data: {
+				simpleData: {
+					enable: true
+				}
+			},
+			view: {
+				selectedMulti: false
+			}
+		};
+		var nodes = [
+			{"id":1, "pId":0, "name":"功能菜单", "icon":"../../img/main/folderOpen.gif", "open":"true"},
+			{"id":11, "pId":1, "name":"cms管理", "icon":"../../img/main/folderOpen.gif", "open":"true"},
+			{"id":12, "pId":1, "name":"系统管理", "icon":"../../img/main/folderOpen.gif", "open":"true"},
+			{"id":111, "pId":11, "name":"轮播图管理", "icon":"../../img/main/leaf.gif"},
+			{"id":112, "pId":11, "name":"首页静态化", "icon":"../../img/main/leaf.gif"},
+			{"id":121, "pId":12, "name":"系统参数", "icon":"../../img/main/leaf.gif"},
+			{"id":122, "pId":12, "name":"字典管理", "icon":"../../img/main/leaf.gif"},
+			{"id":123, "pId":12, "name":"角色管理", "icon":"../../img/main/leaf.gif"},
+			{"id":124, "pId":12, "name":"用户管理", "icon":"../../img/main/leaf.gif"},
+			{"id":125, "pId":12, "name":"修改密码", "icon":"../../img/main/leaf.gif"},
+			{"id":126, "pId":12, "name":"菜单维护", "icon":"../../img/main/leaf.gif"},
+		];
+		$.fn.zTree.init($("#tree"), setting, nodes);
+
+
+		$("#myframe").width($(window).width()-210);
+		$("#myframe").height($(window).height()-210);
+		$(window).resize(function() {
+			$("#myframe").width($(window).width()-210);
+		});
+	</script>
+</body>
+</html>

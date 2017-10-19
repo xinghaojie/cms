@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>用户-修改</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+<body>
+	<form id="form1" name="form1" action="" method="post">
+		<div class="ti">用户修改</div>
+		<table id="dataTab" class="dataTab">
+			<tr>
+				<td class="right30">姓名</td>
+				<td class="left30">
+					<input id="name" class="text-m" type="text" value="张三" maxlength="50" />
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="name_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">登录名</td>
+				<td class="left30">
+					<input id="login_name" class="text-m" type="text" value="zhangsan" maxlength="50" />
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="login_name_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">性别</td>
+				<td class="left30">
+					<select name="gender" class="sel" type="select">
+						<option value="0" selected>男</option>
+						<option value="1">女</option>
+					</select>
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="gender_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">联系电话</td>
+				<td class="left30">
+					<input id="tel" class="text-m" type="text" value="189898989" maxlength="50" />
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="login_name_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">备注</td>
+				<td class="left30">
+					<textarea id="remark" name="remark" maxlength="200" class="tarea"></textarea>
+					<div id="remark_div">最大长度为200个字节</div>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		<center class="btn_div">
+			<input type="button" class="bnt" onclick="update_onclick()" value="更新" />
+			<input type="button" class="bnt" onclick="jumpTo('list.html')" value="返回" />
+		</center>
+	</form>
+</body>
+</html>

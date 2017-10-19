@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>角色-关联用户</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+<body>
+	<div class="ti">角色信息</div>
+	<table name="dataTab" class="dataTab">
+		<tr>
+			<td>角色名称：</td>
+			<td>管理员</td>
+		</tr>
+	</table>
+	
+	<center class="btn_div" >
+		<input type="button" class="bnt" value="确定" onclick="do_Authority('${role.id}');" />
+		<input type="button" class="bnt" value="关闭" onclick="window.close();" />
+	</center>
+
+	<div class="ti">用户列表</div>
+	<table name="dataTab" class="dataTab">
+		<tr>
+			<th><input type="checkbox" id="checkAll" onclick="chkAll()">序号</th>
+			<th>姓名</th>
+			<th>登录名</th>
+			<th>性别</th>
+			<th>部门</th>
+			<th>电话</th>
+		</tr>
+		<tr>
+			<td class="sqe_w"><input type="checkbox" name="chk" onclick="check();" />1</td>
+			<td>张三</td>
+			<td>zhangsan</td>
+			<td>男</td>
+			<td>市场部</td>
+			<td>18989898989</td>
+		</tr>
+		<tr>
+			<td class="sqe_w"><input type="checkbox" name="chk" onclick="check();" />2</td>
+			<td>李四</td>
+			<td>lisi</td>
+			<td>男</td>
+			<td>市场部</td>
+			<td>18989898989</td>
+		</tr>
+		<tr>
+			<td class="sqe_w"><input type="checkbox" checked="true" name="chk" onclick="check();" />3</td>
+			<td>王五</td>
+			<td>wangwu</td>
+			<td>男</td>
+			<td>市场部</td>
+			<td>18989898989</td>
+		</tr>
+	</table>
+</body>
+</html>
