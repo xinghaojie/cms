@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>功能菜单-添加</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+<body>
+	<form id="form1" name="form1" action="" method="post">
+		<div class="ti">功能菜单新增</div>
+		<table id="dataTab" class="dataTab">
+			<tr>
+				<td class="right30">名称</td>
+				<td class="left30">
+					<input id="name" class="text-m" type="text" value="" maxlength="50" />
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="name_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">类型</td>
+				<td class="left30">
+					<input type="radio" name="type" value="MENU" checked />菜单
+					<input type="radio" name="type" value="BUTTON" />按钮
+				</td>
+			</tr>
+			<tr>
+				<td class="right30">地址或按钮键</td>
+				<td class="left30">
+					<input id="url" class="text-m" type="text" value="" maxlength="50" />
+				</td>
+			</tr>
+			<tr>
+				<td class="right30">排序号</td>
+				<td class="left30">
+					<input id="order_num" class="text-m" type="text" value="" maxlength="50" />
+				</td>
+			</tr>
+			<tr>
+				<td class="right30">备注</td>
+				<td class="left30">
+					<textarea id="remark" name="remark" maxlength="200" class="tarea"></textarea>
+					<div id="remark_div">最大长度为200个字节</div>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		<center class="btn_div">
+			<input type="button" class="bnt" onclick="insert_onclick()" value="保存" />
+			<input type="button" class="bnt" onclick="jumpTo('detail.html')" value="返回" />
+		</center>
+	</form>
+</body>
+</html>

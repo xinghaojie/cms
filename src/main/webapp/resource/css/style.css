@@ -1,0 +1,82 @@
+@charset"utf-8";
+body {padding:0px; margin:0px; background:url(../img/main/content_bg.jpg); overflow:auto;}
+/*********************系统参数列表查询区*********************/
+/*页面标题*/
+div.ti{font-size:12px;background:url(../img/main/state.jpg);padding-top: 6px;padding-bottom: 4px;padding-left: 10px;}
+.SearchTab{width:100%;border:0;cellpadding:0;font-size:12px;background:rgb(247, 250, 255);padding-top:5px;padding-bottom:2px;}
+.bnt{width:60px;height:26px;}
+
+/**********************数据区********************/
+/*标题操作区表格*/
+.titleTab{width:100%;cellpadding:0;background:url(../img/main/state.jpg);padding-right: 10px;padding-left: 10px;}
+/*标题操作区表格中的标题*/
+.titleTab td.ti{text-align:left;font-size:12px;}
+/*标题操作区表格中按钮*/
+.titleTab td.bu{text-align:right;}
+
+.dataTab {width:100%; border:1px solid #d0d0d0; border-collapse:collapse; padding-bottom:2px; font-size:12px;}
+/*列表单元格*/
+.dataTab td {border:1px solid #d0d0d0; height:20px}
+/*列表单表头*/
+.dataTab th {border:1px solid #d0d0d0; height:21px; font-weight:normal; background-color:#b0c4d1}
+/*序号列*/
+.dataTab td.sqe_w{width:60px;text-align:center;}
+/*增、删、明细按钮*/
+td.td-del{background:url(../img/ope/delete.gif) no-repeat center; width:45px;cursor:pointer;}
+td.td-upd{background:url(../img/ope/edit.png) no-repeat center;width:45px;cursor:pointer;}
+td.td-det{background:url(../img/ope/grid.gif) no-repeat center;width:45px;cursor:pointer;}
+
+/**********************分页导航区********************/
+.pageDiv{font-size:12px;width:100%;background:url(../img/main/state.jpg) repeat-x;text-align:right;padding-top:4px;padding-bottom:4px;}
+.pageDiv span{display:inline-block;width:25px;cursor:pointer;height: 22px;}
+.pageSize{width:40px;}
+/*图标*/
+.firstPage{background:url(../img/ope/l1.png) no-repeat;}
+.previousPage{background:url(../img/ope/l2.png) no-repeat;}
+.nextPage{background:url(../img/ope/r2.png) no-repeat;}
+.lastPage{background:url(../img/ope/r1.png) no-repeat;}
+.goPage{width:18px;background:url(../img/ope/go.png) no-repeat;}
+
+/**********************新增和修改页面区********************/
+.dataTab td.right30_blue{width:30%;text-align:right;color:#200080;}
+.dataTab td.right200_blue{width:200;text-align:right;color:#200080;}
+.dataTab td.right30{width:30%;text-align:right;}
+.dataTab td.left30{width:30%;}
+.dataTab td.left30_red{width:30%;font-size:12px;color:#CE0000;}
+/*输入域*/
+.tarea{width:200px;height:60px;font-size:12px;}
+/*按钮区*/
+.btn_div{text-align:center;padding-top:3px;width:100%;background:url(../img/main/state.jpg) repeat-x;}
+/*文本框样式*/
+.text-m{width:150px;height:20px;}
+
+/**********************角色页面按钮********************/
+td.td-user{background:url(../img/ope/user.png) no-repeat center;width:55px;cursor:pointer;}
+td.td-shou{background:url(../img/ope/shou.png) no-repeat center;width:55px;cursor:pointer;}
+
+/**********************用户页面下拉框********************/
+.sel{width:200px;height:20px;}
+
+/**********************菜单维护********************/
+.menubody{padding:0px;margin:0px;overflow:hidden;background:url(../img/main/content_bg.jpg);}
+.menu_bar{float:left;width:200px;height:100%;}
+.content{margin-left:206px;height:100%;}
+
+/**********************CMS主页面********************/
+.mainbody{padding:0px;margin:0px;overflow:hidden;}
+.buttonbar{float:left;width:6px;background:url(../img/main/left.png) no-repeat center;cursor:pointer;height:100%;}
+
+/*顶部*/
+.top_div{padding:0px;margin:0px;overflow:hidden;}
+.toptab{width:100%;border-collapse:collapse;background:url(../img/main/top.png) repeat-x;}
+.logo_div{width:100%;height:80px;background:url(../img/login/logo.png) no-repeat 20px 30px;}
+.title_td{width:400px;background:url(../img/login/title.png) no-repeat center;}
+.left_div{width:100%;}
+.top_foot_out{height:30px;width:100%;background:url(../img/main/state.jpg);}
+.top_foot{width:100%;margin:0 auto;text-align:right;padding-top:4px;font-size:13px;}
+.logout{height:22px;width:22px;display:inline-block;background:url(../img/main/power.png) no-repeat;cursor: pointer;vertical-align: top;}
+.timediv{display:inline-block;padding-top:5px;}
+
+/*左边菜单栏*/
+.menu_title{width:200px;height:40px;background:url(../img/main/left_top.jpg) no-repeat;}
+

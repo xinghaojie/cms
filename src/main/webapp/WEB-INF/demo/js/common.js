@@ -1,3 +1,47 @@
+
+/**
+* 描述：删除多个数据的方法
+* @作者：邢浩杰
+* @时间 2017/10/20
+*/
+function deleteByIds(uri) {
+	var chks = document.getElementsByName("chk");
+	var count = 0; // 统计数量
+	var id="";
+	for(var i=0; i<chks.length; i++) {
+		if(chks[i].checked == true) {
+			count++;
+			id += chks[i].value + ",";
+		}
+	}
+	id = id.substring(0, id.length-1);
+	alert(id);
+}
+
+/**
+* 描述：校验文本框内容不为空
+* @时间：2017/10/20
+*/
+var count = 0;
+function notBlank(id, text) {
+	var inputElt = document.getElementById(id);
+	var errorMsgElt = document.getElementById(id+"_td");
+	if(inputElt.value == "") {
+		errorMsgElt.innerHTML = text + "不能为空!";
+		count++;
+	}
+}
+function bindEvent(id, text) {
+	var inputElt = document.getElementById(id);
+	var errorMsgElt = document.getElementById(id+"_td");
+	inputElt.onfocus = function() {
+		errorMsgElt.innerHTML = "";
+	}
+	inputElt.onblur = function() {
+		notBlank(id, text);
+	}
+}
+
 /**
 * 描述：默认的通用弹出窗口
 * @作者：邢浩杰

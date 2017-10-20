@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>字典类型-修改</title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css" />
+	<script type="text/javascript" src="../../js/common.js"></script>
+</head>
+<body>
+	<form id="form1" name="form1" action="" method="post">
+		<div class="ti">字典类型修改</div>
+		<table id="dataTab" class="dataTab">
+			<tr>
+				<td class="right30">类型标识</td>
+				<td class="left30">
+					<input id="type_code" class="text-m" type="text" value="11" maxlength="50" />
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="type_code_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">类型名称</td>
+				<td class="left30">
+					<input id="type_name" class="text-m" type="text" value="轮播图状态" maxlength="50" />
+					<font color="#CE0000">*</font>
+				</td>
+				<td class="left30_red" id="type_name_td"></td>
+			</tr>
+			<tr>
+				<td class="right30">备注</td>
+				<td class="left30">
+					<textarea id="remark" name="remark" maxlength="200" class="tarea">0禁用，1启用</textarea>
+					<div id="remark_div">最大长度为200个字节</div>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		<center class="btn_div">
+			<input type="button" class="bnt" onclick="update_onclick()" value="更新" />
+			<input type="button" class="bnt" onclick="jumpTo('list.html')" value="返回" />
+		</center>
+	</form>
+</body>
+</html>

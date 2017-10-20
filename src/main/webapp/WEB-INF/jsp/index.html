@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>cms系统</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/common.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="js/zTree/css/zTreeStyle/zTreeStyle.css" />
+	<script type="text/javascript" src="js/zTree/js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/zTree/js/jquery.ztree.all.min.js"></script>
+</head>
+<body class="mainbody">
+	<!-- 顶部 -->
+	<div id="header" class="top_div">
+		<table class="toptab">
+			<tr>
+				<td><div class="logo_div"></div></td>
+				<td class="title_td"></td>
+				<td><div class="left_div"></div></td>
+			</tr>
+		</table>
+		<div class="top_foot_out">
+			<div class="top_foot">
+				<span class="timediv">时间: <span id="mtime"></span> &nbsp;&nbsp;你好!管理员 &nbsp;&nbsp;
+				</span> <span class="logout" onclick="logout()" title="退出">&nbsp;</span>&nbsp;&nbsp; &nbsp;&nbsp;
+			</div>
+			<script type="text/javascript">
+				var get_time = function() {
+					$("#mtime").html(new Date().toLocaleString());
+				}
+				get_time();
+				window.setInterval("get_time()", 1000);
+
+				function logout() {
+					top.location.href="login.html";
+				}
+			</script>
+		</div>
+	</div>
+	
+	<div class="container" id="container">
+		<!-- 左边菜单栏 -->
+		<div class="menu_bar" id="menu_bar">
+			<iframe id="tree_iframe" src="menu.html" width="100%" frameborder="0"></iframe>
+		</div>
+		<div class="buttonbar" id="b-line" onmouseout="backout()" onmouseover="backover()" onclick="show_hide();"></div>
+
+		<!-- 右边工作区 -->
+		<div class="content" id="content">
+			<iframe id="center" name="center" width="100%" frameborder="0"></iframe>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+
+	//隐藏侧边菜单栏.作者：gzz
+	var sideWidth = $("#menu_bar").width();
+	function show_hide() {//隐藏侧边栏
+		if ($("#menu_bar").width() == 0) {
+			$("#menu_bar").width(sideWidth);
+			$("#content").css({"margin-left": sideWidth + $("#b-line").width()});
+			$("#b-line").css({"background-image": "url(img/main/left.png)"});
+		} else {
+			$("#menu_bar").width(0);
+			$("#content").css({"margin-left": $("#b-line").width()});
+			$("#b-line").css({"background-image": "url(img/main/right.png)"});
+		}
+	}
+	function backout() {
+		$("#b-line").css({"background-color": "#e6e6fa"});
+	}
+	function backover() {
+		$("#b-line").css({"background-color": "#d0d0d0"});
+	}
+
+	function winResize() {
+		//窗口高度自动适应不同分辨率.作者：gzz
+		var pageHgight = top.document.documentElement.clientHeight - 110 -4;
+		$("#center").height(pageHgight);
+		$("#tree_iframe").height(pageHgight);
+		$("#container").height(pageHgight);
+	}
+	$(window).resize(function() {
+		winResize();
+	});
+	$(document).ready(function() {
+		winResize();
+	});
+</script>
+</html>

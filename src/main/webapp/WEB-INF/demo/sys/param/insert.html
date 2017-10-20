@@ -48,5 +48,23 @@
 			<input type="button" class="bnt" onclick="jumpTo('list.html')" value="返回" />
 		</center>
 	</form>
+
+	<script type="text/javascript">
+		bindEvent("name", "参数名称");
+		bindEvent("param_key", "参数键");
+		bindEvent("param_value", "参数值");
+
+		function insert_onclick() {
+			notBlank("name", "参数名称");
+			notBlank("param_key", "参数键");
+			notBlank("param_value", "参数值");
+			if(count>0) {
+				count = 0;
+				alert("验证未通过");
+				return false;
+			}
+			alert("验证通过");
+		}
+	</script>
 </body>
 </html>
